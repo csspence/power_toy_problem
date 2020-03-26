@@ -9,6 +9,13 @@ numberToPower(10,6) // -> 1000000
 Note: Math.pow and some others Math functions are disabled on final tests.
 */
 
-function numberToPower(number, power){
-  // Code here
+const numberToPower = (number, power) => {
+  let num = number;
+  if(power === 0) {
+    return 1;
+  }
+  for(let i = 1; i < power; i++) {
+    num = num * number;
+  }
+  return num;
 }
